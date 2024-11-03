@@ -4,9 +4,7 @@ const app = express();
 const porta = 3000;
 const host = '0.0.0.0';
 
-
 app.use(express.urlencoded({ extended: true }));
-
 
 app.get('/', (req, res) => {
     res.send(`
@@ -28,7 +26,6 @@ app.get('/', (req, res) => {
         </form>
     `);
 });
-
 
 app.post('/processar-formulario', (req, res) => {
     const { codigo, nome, descricao, preco } = req.body;
